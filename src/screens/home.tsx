@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Button, Select } from "../components";
+import { ButtonLink, Select } from "../components";
 
 type DataType = Partial<{}> & {
   id: number;
@@ -66,7 +65,7 @@ export const HomeScreen = () => {
   return (
     <div>
       <div>Home</div>
-      {data.map((val, index) => (
+      {/* {data.map((val, index) => (
         <Select
           key={`locations-${val.id}-${index}`}
           name={val.name}
@@ -78,10 +77,10 @@ export const HomeScreen = () => {
             value: opt.id,
           }))}
         />
-      ))}
+      ))} */}
 
-      <Button name="Go to Contact" to="/contact" />
-      <Button name="Go to About" to="/about" state={{ test: "New button" }} />
+      <ButtonLink name="Go to Contact" to="/contact" />
+      <ButtonLink name="Go to About" to="/about" state={{ test: "New button" }} />
     </div>
   );
 };

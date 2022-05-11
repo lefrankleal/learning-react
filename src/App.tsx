@@ -3,17 +3,18 @@ import {
   AboutScreen,
   ContactScreen,
   HomeScreen,
+  LoginScreen,
   NotFoundScreen,
 } from "./screens";
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const test = true;
+  const auth = false;
 
   return (
     <Routes>
-      {test ? (
+      {auth ? (
         <Fragment>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/about" element={<AboutScreen />} />
@@ -21,7 +22,10 @@ function App() {
           <Route path="*" element={<HomeScreen />} />
         </Fragment>
       ) : (
-        <Route path="*" element={<NotFoundScreen />} />
+        <Fragment>
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
+        </Fragment>
       )}
     </Routes>
   );
