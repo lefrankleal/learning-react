@@ -81,6 +81,7 @@ export const HomeScreen = () => {
 
       <ButtonLink name="Go to Contact" to="/contact" />
       <ButtonLink name="Go to About" to="/about" state={{ test: "New button" }} />
+      <ButtonLink name="Cerrar sesión" to="/login" />
     </div>
   );
 };
